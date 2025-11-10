@@ -1,0 +1,9 @@
+sudo pacman -S virt-viewer 
+
+python -m venv vdiclientenv
+source vdiclientenv/bin/activate
+pip install proxmoxer
+pip install requests
+
+
+Next setup your api athentication
