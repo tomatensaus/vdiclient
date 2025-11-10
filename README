@@ -1,3 +1,10 @@
+
+This package was quickly hacked together because I needed a menu on the command line to quickly launch the Proxmox vm in virtViewer
+
+
+
+To install:
+
 sudo pacman -S virt-viewer 
 
 python -m venv vdiclientenv
@@ -6,4 +13,19 @@ pip install proxmoxer
 pip install requests
 
 
-Next setup your api athentication
+Go to your proxmox interface and setup a user on Proxmox Datacenter
+
+next setup an api key for this user (copy to vdiclient.ini)
+setup rights for this user to start/stop VM/LXC
+setup rights to each container you want to give access to
+
+edit your vdiclient.ini add your server
+
+add a /etc/hosts entry to point to your server
+
+proxmox.local	192.168.1.123
+
+./vdiclient.py
+
+
+
